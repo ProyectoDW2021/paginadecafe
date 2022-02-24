@@ -12,9 +12,10 @@
     color: aliceblue;
     margin: 0; padding: 0;
     box-sizing: border-box;
-    outline: none; border:none;
+    outline: none; 
+    border:none;
     text-decoration: none;
-    text-transform: none;
+    text-transform: capitalize;
     transition: .2s linear;
 }
 html{
@@ -54,7 +55,7 @@ section{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: 9rem 3 rem;
+    padding: .9rem 3 rem;
     font-size:  1.rem;
     color: #fff;
     background: var(--main-color);
@@ -105,7 +106,6 @@ section{
     display: none;
 }
 .header .search-form{
-    position: absolute;
     top: 115%;
     background: #fff ;
     width: 50rem;
@@ -437,24 +437,24 @@ section{
     border: var(--border);
     margin: .3rem;
     border-radius: 50%;
-   }
-   .footer .share a:hover{
-       background-color: var(--main-color);
-   }
-   .footer .links{
-       display: flex;
-       justify-content: center;
-       flex-wrap: wrap;
-       padding: 2rem 0;
-       gap: 1rem;
-   }
-   .footer .links a{
-       color: white;
-       border: var(--border);
-       font-size: 2rem;
-       padding: .7rem 2rem ;
-       text-decoration: none;
     }
+    .footer .share a:hover{
+        background-color: var(--main-color);
+    }
+    .footer .links{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+    .footer .links a{
+        color: white;
+        border: var(--border);
+        font-size: 2rem;
+        padding: .7rem 2rem ;
+        text-decoration: none;
+        }
     .footer .links a:hover{
        background: var(--main-color);
     }
@@ -469,3 +469,93 @@ section{
     .footer .cred span{   
         color: var(--main-color);  
     }
+
+    /********************For resposive************/
+
+    /* media query */
+    @media (max-widht:991px){
+
+        html {
+            font-size:  55%;
+        }
+
+        .header {
+            padding: 1.5rem 2rem;
+        }
+
+        section{
+            padding: 2rem;
+        }
+    }
+
+    @media (max-width:991px){
+
+        html{
+            font-size: 55%;
+        }
+    
+        .header{
+            padding:1.5rem 2rem;
+        }
+    
+        section{
+            padding:2rem;
+        }
+    
+    }
+    
+    @media (max-width:768px){
+    
+        #menu-btn{
+            display: inline-block;
+        }
+    
+        .header .navbar{
+            position: absolute;
+            top:100%; right: -100%;
+            background: #fff;
+            width: 30rem;
+            height: calc(100vh - 9.5rem);
+        }
+    
+        .header .navbar.active{
+            right:0;
+        }
+    
+        .header .navbar a{
+            color:var(--black);
+            display: block;
+            margin:1.5rem;
+            padding:.5rem;
+            font-size: 2rem;
+        }
+    
+        .header .search-form{
+            width: 90%;
+            right: 2rem;
+        }
+    
+        .home{
+            background-position: left;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .home .content h3{
+            font-size: 4.5rem;
+        }
+    
+        .home .content p{
+            font-size: 1.5rem;
+        }
+    
+    }
+    
+    @media (max-width:450px){
+    
+        html{
+            font-size: 50%;
+        }
+    
+    }
+    
